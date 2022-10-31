@@ -1,0 +1,12 @@
+D:\WORK\.NET CAPACITACIONES\PRACTICA1\UCO.PracticaNET\UCO.PracticaNET.ReglasNegocio\bin\Debug\UCO.PracticaNET.ReglasNegocio.dll.config
+D:\WORK\.NET CAPACITACIONES\PRACTICA1\UCO.PracticaNET\UCO.PracticaNET.ReglasNegocio\bin\Debug\UCO.PracticaNET.ReglasNegocio.dll
+D:\WORK\.NET CAPACITACIONES\PRACTICA1\UCO.PracticaNET\UCO.PracticaNET.ReglasNegocio\bin\Debug\UCO.PracticaNET.ReglasNegocio.pdb
+D:\WORK\.NET CAPACITACIONES\PRACTICA1\UCO.PracticaNET\UCO.PracticaNET.ReglasNegocio\bin\Debug\EntityFramework.dll
+D:\WORK\.NET CAPACITACIONES\PRACTICA1\UCO.PracticaNET\UCO.PracticaNET.ReglasNegocio\bin\Debug\EntityFramework.SqlServer.dll
+D:\WORK\.NET CAPACITACIONES\PRACTICA1\UCO.PracticaNET\UCO.PracticaNET.ReglasNegocio\bin\Debug\EntityFramework.xml
+D:\WORK\.NET CAPACITACIONES\PRACTICA1\UCO.PracticaNET\UCO.PracticaNET.ReglasNegocio\bin\Debug\EntityFramework.SqlServer.xml
+D:\WORK\.NET CAPACITACIONES\PRACTICA1\UCO.PracticaNET\UCO.PracticaNET.ReglasNegocio\obj\Debug\UCO.PracticaNET.ReglasNegocio.csproj.AssemblyReference.cache
+D:\WORK\.NET CAPACITACIONES\PRACTICA1\UCO.PracticaNET\UCO.PracticaNET.ReglasNegocio\obj\Debug\UCO.PracticaNET.ReglasNegocio.csproj.CoreCompileInputs.cache
+D:\WORK\.NET CAPACITACIONES\PRACTICA1\UCO.PracticaNET\UCO.PracticaNET.ReglasNegocio\obj\Debug\UCO.PracticaNET.ReglasNegocio.csproj.CopyComplete
+D:\WORK\.NET CAPACITACIONES\PRACTICA1\UCO.PracticaNET\UCO.PracticaNET.ReglasNegocio\obj\Debug\UCO.PracticaNET.ReglasNegocio.dll
+D:\WORK\.NET CAPACITACIONES\PRACTICA1\UCO.PracticaNET\UCO.PracticaNET.ReglasNegocio\obj\Debug\UCO.PracticaNET.ReglasNegocio.pdb

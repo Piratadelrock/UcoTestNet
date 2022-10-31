@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="UCOPracticaNETModelStoreContainer" CdmEntityContainer="UCOPracticasNETEntities">
+    <EntitySetMapping Name="asignaturas">
+      <EntityTypeMapping TypeName="UCOPracticaNETModel.asignatura">
+        <MappingFragment StoreEntitySet="asignatura">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="materia" ColumnName="materia" />
+          <ScalarProperty Name="credito" ColumnName="credito" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ciudads">
+      <EntityTypeMapping TypeName="UCOPracticaNETModel.ciudad">
+        <MappingFragment StoreEntitySet="ciudad">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="estudiantes">
+      <EntityTypeMapping TypeName="UCOPracticaNETModel.estudiante">
+        <MappingFragment StoreEntitySet="estudiante">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="direccion" ColumnName="direccion" />
+          <ScalarProperty Name="telefono" ColumnName="telefono" />
+          <ScalarProperty Name="ciudad" ColumnName="ciudad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="registroNotas">
+      <EntityTypeMapping TypeName="UCOPracticaNETModel.registroNota">
+        <MappingFragment StoreEntitySet="registroNotas">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="idEstudiante" ColumnName="idEstudiante" />
+          <ScalarProperty Name="idAsignatura" ColumnName="idAsignatura" />
+          <ScalarProperty Name="nota" ColumnName="nota" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

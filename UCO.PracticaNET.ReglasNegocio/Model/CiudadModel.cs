@@ -27,6 +27,7 @@ namespace UCO.PracticaNET.ReglasNegocio.Model
 
             //creo el objeto entidad
             UCOPracticasNETEntities entidadDatos = new UCOPracticasNETEntities();
+
             listadoCiudad = (from c in entidadDatos.ciudads
                              select c).Select(registroCiudad => new CiudadModel
                              {

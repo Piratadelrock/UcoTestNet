@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="UCOPracticaNETModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="asignatura">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Guid" Nullable="false" />
+    <Property Name="materia" Type="String" MaxLength="50" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="credito" Type="Decimal" Precision="3" Scale="0" Nullable="false" />
+    <NavigationProperty Name="registroNotas" Relationship="Self.FK_registroNotas_Asignatura" FromRole="asignatura" ToRole="registroNotas" />
+  </EntityType>
+  <EntityType Name="ciudad">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="nombre" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="estudiantes" Relationship="Self.FK_estudiante_ciudad" FromRole="ciudad" ToRole="estudiante" />
+  </EntityType>
+  <EntityType Name="estudiante">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Guid" Nullable="false" />
+    <Property Name="nombre" Type="String" MaxLength="100" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="direccion" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="telefono" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ciudad" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="ciudad1" Relationship="Self.FK_estudiante_ciudad" FromRole="estudiante" ToRole="ciudad" />
+    <NavigationProperty Name="registroNotas" Relationship="Self.FK_registroNotas_Estudiante" FromRole="estudiante" ToRole="registroNotas" />
+  </EntityType>
+  <EntityType Name="registroNota">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Guid" Nullable="false" />
+    <Property Name="idEstudiante" Type="Guid" Nullable="false" />
+    <Property Name="idAsignatura" Type="Guid" Nullable="false" />
+    <Property Name="nota" Type="Decimal" Precision="5" Scale="2" Nullable="false" />
+    <NavigationProperty Name="asignatura" Relationship="Self.FK_registroNotas_Asignatura" FromRole="registroNotas" ToRole="asignatura" />
+    <NavigationProperty Name="estudiante" Relationship="Self.FK_registroNotas_Estudiante" FromRole="registroNotas" ToRole="estudiante" />
+  </EntityType>
+  <Association Name="FK_registroNotas_Asignatura">
+    <End Role="asignatura" Type="Self.asignatura" Multiplicity="1" />
+    <End Role="registroNotas" Type="Self.registroNota" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="asignatura">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="registroNotas">
+        <PropertyRef Name="idAsignatura" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_estudiante_ciudad">
+    <End Role="ciudad" Type="Self.ciudad" Multiplicity="1" />
+    <End Role="estudiante" Type="Self.estudiante" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ciudad">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="estudiante">
+        <PropertyRef Name="ciudad" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_registroNotas_Estudiante">
+    <End Role="estudiante" Type="Self.estudiante" Multiplicity="1" />
+    <End Role="registroNotas" Type="Self.registroNota" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="estudiante">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="registroNotas">
+        <PropertyRef Name="idEstudiante" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="UCOPracticasNETEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="asignaturas" EntityType="Self.asignatura" />
+    <EntitySet Name="ciudads" EntityType="Self.ciudad" />
+    <EntitySet Name="estudiantes" EntityType="Self.estudiante" />
+    <EntitySet Name="registroNotas" EntityType="Self.registroNota" />
+    <AssociationSet Name="FK_registroNotas_Asignatura" Association="Self.FK_registroNotas_Asignatura">
+      <End Role="asignatura" EntitySet="asignaturas" />
+      <End Role="registroNotas" EntitySet="registroNotas" />
+    </AssociationSet>
+    <AssociationSet Name="FK_estudiante_ciudad" Association="Self.FK_estudiante_ciudad">
+      <End Role="ciudad" EntitySet="ciudads" />
+      <End Role="estudiante" EntitySet="estudiantes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_registroNotas_Estudiante" Association="Self.FK_registroNotas_Estudiante">
+      <End Role="estudiante" EntitySet="estudiantes" />
+      <End Role="registroNotas" EntitySet="registroNotas" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

@@ -46,14 +46,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="listadoCiudad.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="listadoCiudad.Designer.cs">
+      <DependentUpon>listadoCiudad.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="listadoCiudad.resx">
+      <DependentUpon>listadoCiudad.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -63,6 +66,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="Properties\DataSources\UCO.PracticaNET.ReglasNegocio.asignatura.datasource" />
+    <None Include="Properties\DataSources\UCO.PracticaNET.ReglasNegocio.ciudad.datasource" />
+    <None Include="Properties\DataSources\UCO.PracticaNET.ReglasNegocio.estudiante.datasource" />
+    <None Include="Properties\DataSources\UCO.PracticaNET.ReglasNegocio.Model.CiudadModel.datasource" />
+    <None Include="Properties\DataSources\UCO.PracticaNET.ReglasNegocio.registroNota.datasource" />
+    <None Include="Properties\DataSources\UCO.PracticaNET.ReglasNegocio.UCOPracticasNETEntities.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -75,6 +84,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\UCO.PracticaNET.ReglasNegocio\UCO.PracticaNET.ReglasNegocio.csproj">
+      <Project>{52a93921-d9bc-444f-b3ff-2195f9fd8996}</Project>
+      <Name>UCO.PracticaNET.ReglasNegocio</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

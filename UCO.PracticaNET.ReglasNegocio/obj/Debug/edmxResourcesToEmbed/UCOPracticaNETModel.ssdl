@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="UCOPracticaNETModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="asignatura">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="materia" Type="char" MaxLength="50" Nullable="false" />
+    <Property Name="credito" Type="numeric" Precision="3" Scale="0" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ciudad">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="nombre" Type="varchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityType Name="estudiante">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="nombre" Type="char" MaxLength="100" Nullable="false" />
+    <Property Name="direccion" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="telefono" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="ciudad" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="registroNotas">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="idEstudiante" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="idAsignatura" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="nota" Type="numeric" Precision="5" Scale="2" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_estudiante_ciudad">
+    <End Role="ciudad" Type="Self.ciudad" Multiplicity="1" />
+    <End Role="estudiante" Type="Self.estudiante" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ciudad">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="estudiante">
+        <PropertyRef Name="ciudad" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_registroNotas_Asignatura">
+    <End Role="asignatura" Type="Self.asignatura" Multiplicity="1" />
+    <End Role="registroNotas" Type="Self.registroNotas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="asignatura">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="registroNotas">
+        <PropertyRef Name="idAsignatura" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_registroNotas_Estudiante">
+    <End Role="estudiante" Type="Self.estudiante" Multiplicity="1" />
+    <End Role="registroNotas" Type="Self.registroNotas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="estudiante">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="registroNotas">
+        <PropertyRef Name="idEstudiante" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="UCOPracticaNETModelStoreContainer">
+    <EntitySet Name="asignatura" EntityType="Self.asignatura" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ciudad" EntityType="Self.ciudad" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="estudiante" EntityType="Self.estudiante" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="registroNotas" EntityType="Self.registroNotas" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_estudiante_ciudad" Association="Self.FK_estudiante_ciudad">
+      <End Role="ciudad" EntitySet="ciudad" />
+      <End Role="estudiante" EntitySet="estudiante" />
+    </AssociationSet>
+    <AssociationSet Name="FK_registroNotas_Asignatura" Association="Self.FK_registroNotas_Asignatura">
+      <End Role="asignatura" EntitySet="asignatura" />
+      <End Role="registroNotas" EntitySet="registroNotas" />
+    </AssociationSet>
+    <AssociationSet Name="FK_registroNotas_Estudiante" Association="Self.FK_registroNotas_Estudiante">
+      <End Role="estudiante" EntitySet="estudiante" />
+      <End Role="registroNotas" EntitySet="registroNotas" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
