@@ -15,8 +15,7 @@ namespace UCO.PracticaNET.ReglasNegocio.Model
 
         [DisplayName("Nombre de la ciudad")]
         public string Name { get; set; }
-
-
+        
         #endregion
 
 
@@ -35,7 +34,7 @@ namespace UCO.PracticaNET.ReglasNegocio.Model
                                  Name = registroCiudad.nombre
 
                              }).ToList();
-            return null;
+            return listadoCiudad;
 
         }
     }

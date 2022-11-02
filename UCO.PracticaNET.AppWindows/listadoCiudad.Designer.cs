@@ -45,12 +45,13 @@
             this.idDataGridViewTextBoxColumn,
             this.nameDataGridViewTextBoxColumn});
             this.dataGridCiudad.DataSource = this.ciudadModelBindingSource;
-            this.dataGridCiudad.Location = new System.Drawing.Point(85, 80);
+            this.dataGridCiudad.Location = new System.Drawing.Point(12, 12);
             this.dataGridCiudad.Name = "dataGridCiudad";
             this.dataGridCiudad.RowHeadersWidth = 51;
             this.dataGridCiudad.RowTemplate.Height = 24;
-            this.dataGridCiudad.Size = new System.Drawing.Size(377, 246);
+            this.dataGridCiudad.Size = new System.Drawing.Size(689, 404);
             this.dataGridCiudad.TabIndex = 0;
+            this.dataGridCiudad.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridCiudad_CellContentClick);
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -72,13 +73,13 @@
             // 
             this.ciudadModelBindingSource.DataSource = typeof(UCO.PracticaNET.ReglasNegocio.Model.CiudadModel);
             // 
-            // dataGridListaContactos
+            // ListadoCiudad
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.dataGridCiudad);
-            this.Name = "dataGridListaContactos";
+            this.Name = "ListadoCiudad";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridCiudad)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ciudadModelBindingSource)).EndInit();

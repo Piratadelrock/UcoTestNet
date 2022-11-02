@@ -29,5 +29,10 @@ namespace UCO.PracticaNET.AppWindows
             dataGridCiudad.DataSource = ciudadModelBindingSource;
 
         }
+
+        private void dataGridCiudad_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
