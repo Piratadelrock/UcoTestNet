@@ -17,14 +17,17 @@ namespace UCO.PracticaNET.AppWindows
         {
             InitializeComponent();
 
-            //proceso para mostrar y cargar los datos en el  grid view 
+            ///proceso para mostrar y cargar los datos en el  grid view 
             
-            //crear la instancia del objeto CiudadModel de las reglas del negocio 
+            //creamos la instancia de CiudadModel de las reglas del negocio 
             //
             CiudadModel listadoCiudad = new CiudadModel();
-
+            
             //necesito llevarselo al grid directamente por lo que debemos usar un bindingsource para aplicarlo
             ciudadModelBindingSource.DataSource = listadoCiudad.ConsultarCiudad();
+
+            ///TODO: crear crud 
+            ///ciudadModelBindingSource.DataSource = listadoCiudad.CrearCiudad();
             //se conecta el grid, con el datasource igual al binding de ciudad
             dataGridCiudad.DataSource = ciudadModelBindingSource;
 
