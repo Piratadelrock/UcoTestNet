@@ -24,7 +24,7 @@ namespace UCO.PracticaNET.AppWindows
             CiudadModel listadoCiudad = new CiudadModel();
             
             //necesito llevarselo al grid directamente por lo que debemos usar un bindingsource para aplicarlo
-            ciudadModelBindingSource.DataSource = listadoCiudad.ConsultarCiudad();
+            ciudadModelBindingSource.DataSource = listadoCiudad.ConsultarCiudadxSP();
 
             ///TODO: crear crud 
             ///ciudadModelBindingSource.DataSource = listadoCiudad.CrearCiudad();

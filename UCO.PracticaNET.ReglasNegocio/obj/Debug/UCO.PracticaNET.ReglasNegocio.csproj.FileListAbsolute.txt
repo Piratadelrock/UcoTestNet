@@ -22,3 +22,15 @@ D:\U\WORK\1CAPACITACIONES\.NET CAPACITACIONES\PRACTICA1\UCO.PracticaNET\UCO.Prac
 D:\U\WORK\1CAPACITACIONES\.NET CAPACITACIONES\PRACTICA1\UCO.PracticaNET\UCO.PracticaNET.ReglasNegocio\obj\Debug\UCO.PracticaNET.ReglasNegocio.csproj.CopyComplete
 D:\U\WORK\1CAPACITACIONES\.NET CAPACITACIONES\PRACTICA1\UCO.PracticaNET\UCO.PracticaNET.ReglasNegocio\obj\Debug\UCO.PracticaNET.ReglasNegocio.dll
 D:\U\WORK\1CAPACITACIONES\.NET CAPACITACIONES\PRACTICA1\UCO.PracticaNET\UCO.PracticaNET.ReglasNegocio\obj\Debug\UCO.PracticaNET.ReglasNegocio.pdb
+D:\U\TrainingDev\CAPACITACIONES .NET\codigo\PRACTICA1-act\UCO.PracticaNET\UCO.PracticaNET.ReglasNegocio\bin\Debug\UCO.PracticaNET.ReglasNegocio.dll.config
+D:\U\TrainingDev\CAPACITACIONES .NET\codigo\PRACTICA1-act\UCO.PracticaNET\UCO.PracticaNET.ReglasNegocio\bin\Debug\UCO.PracticaNET.ReglasNegocio.dll
+D:\U\TrainingDev\CAPACITACIONES .NET\codigo\PRACTICA1-act\UCO.PracticaNET\UCO.PracticaNET.ReglasNegocio\bin\Debug\UCO.PracticaNET.ReglasNegocio.pdb
+D:\U\TrainingDev\CAPACITACIONES .NET\codigo\PRACTICA1-act\UCO.PracticaNET\UCO.PracticaNET.ReglasNegocio\bin\Debug\EntityFramework.dll
+D:\U\TrainingDev\CAPACITACIONES .NET\codigo\PRACTICA1-act\UCO.PracticaNET\UCO.PracticaNET.ReglasNegocio\bin\Debug\EntityFramework.SqlServer.dll
+D:\U\TrainingDev\CAPACITACIONES .NET\codigo\PRACTICA1-act\UCO.PracticaNET\UCO.PracticaNET.ReglasNegocio\bin\Debug\EntityFramework.xml
+D:\U\TrainingDev\CAPACITACIONES .NET\codigo\PRACTICA1-act\UCO.PracticaNET\UCO.PracticaNET.ReglasNegocio\bin\Debug\EntityFramework.SqlServer.xml
+D:\U\TrainingDev\CAPACITACIONES .NET\codigo\PRACTICA1-act\UCO.PracticaNET\UCO.PracticaNET.ReglasNegocio\obj\Debug\UCO.PracticaNET.ReglasNegocio.csproj.AssemblyReference.cache
+D:\U\TrainingDev\CAPACITACIONES .NET\codigo\PRACTICA1-act\UCO.PracticaNET\UCO.PracticaNET.ReglasNegocio\obj\Debug\UCO.PracticaNET.ReglasNegocio.csproj.CoreCompileInputs.cache
+D:\U\TrainingDev\CAPACITACIONES .NET\codigo\PRACTICA1-act\UCO.PracticaNET\UCO.PracticaNET.ReglasNegocio\obj\Debug\UCO.PracticaNET.ReglasNegocio.csproj.CopyComplete
+D:\U\TrainingDev\CAPACITACIONES .NET\codigo\PRACTICA1-act\UCO.PracticaNET\UCO.PracticaNET.ReglasNegocio\obj\Debug\UCO.PracticaNET.ReglasNegocio.dll
+D:\U\TrainingDev\CAPACITACIONES .NET\codigo\PRACTICA1-act\UCO.PracticaNET\UCO.PracticaNET.ReglasNegocio\obj\Debug\UCO.PracticaNET.ReglasNegocio.pdb
