@@ -29,29 +29,82 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.Label nombreLabel;
             this.dataGridCiudad = new System.Windows.Forms.DataGridView();
+            this.nombreTextBox = new System.Windows.Forms.TextBox();
+            this.btnSave = new System.Windows.Forms.Button();
+            this.btnCancel = new System.Windows.Forms.Button();
+            this.btnDelete = new System.Windows.Forms.Button();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ciudadModelBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            nombreLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridCiudad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ciudadModelBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
+            // nombreLabel
+            // 
+            nombreLabel.AutoSize = true;
+            nombreLabel.Location = new System.Drawing.Point(53, 52);
+            nombreLabel.Name = "nombreLabel";
+            nombreLabel.Size = new System.Drawing.Size(56, 16);
+            nombreLabel.TabIndex = 4;
+            nombreLabel.Text = "nombre:";
+            // 
             // dataGridCiudad
             // 
+            this.dataGridCiudad.AllowUserToDeleteRows = false;
             this.dataGridCiudad.AutoGenerateColumns = false;
             this.dataGridCiudad.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridCiudad.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idDataGridViewTextBoxColumn,
             this.nameDataGridViewTextBoxColumn});
             this.dataGridCiudad.DataSource = this.ciudadModelBindingSource;
-            this.dataGridCiudad.Location = new System.Drawing.Point(12, 12);
+            this.dataGridCiudad.Location = new System.Drawing.Point(440, 12);
             this.dataGridCiudad.Name = "dataGridCiudad";
+            this.dataGridCiudad.ReadOnly = true;
             this.dataGridCiudad.RowHeadersWidth = 51;
             this.dataGridCiudad.RowTemplate.Height = 24;
-            this.dataGridCiudad.Size = new System.Drawing.Size(689, 404);
+            this.dataGridCiudad.Size = new System.Drawing.Size(446, 472);
             this.dataGridCiudad.TabIndex = 0;
             this.dataGridCiudad.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridCiudad_CellContentClick);
+            // 
+            // nombreTextBox
+            // 
+            this.nombreTextBox.Location = new System.Drawing.Point(115, 49);
+            this.nombreTextBox.Name = "nombreTextBox";
+            this.nombreTextBox.Size = new System.Drawing.Size(100, 22);
+            this.nombreTextBox.TabIndex = 5;
+            // 
+            // btnSave
+            // 
+            this.btnSave.Location = new System.Drawing.Point(56, 96);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(75, 23);
+            this.btnSave.TabIndex = 9;
+            this.btnSave.Text = "Save";
+            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
+            // btnCancel
+            // 
+            this.btnCancel.Location = new System.Drawing.Point(221, 96);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(75, 23);
+            this.btnCancel.TabIndex = 10;
+            this.btnCancel.Text = "Cancel";
+            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.Location = new System.Drawing.Point(140, 96);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(75, 23);
+            this.btnDelete.TabIndex = 11;
+            this.btnDelete.Text = "Delete";
+            this.btnDelete.UseVisualStyleBackColor = true;
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -77,13 +130,19 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(917, 496);
+            this.Controls.Add(this.btnDelete);
+            this.Controls.Add(this.btnCancel);
+            this.Controls.Add(this.btnSave);
+            this.Controls.Add(nombreLabel);
+            this.Controls.Add(this.nombreTextBox);
             this.Controls.Add(this.dataGridCiudad);
             this.Name = "ListadoCiudad";
-            this.Text = "Form1";
+            this.Text = "Listado de ciudades";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridCiudad)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ciudadModelBindingSource)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -93,6 +152,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource ciudadModelBindingSource;
+        private System.Windows.Forms.TextBox nombreTextBox;
+        private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.Button btnDelete;
     }
 }
 

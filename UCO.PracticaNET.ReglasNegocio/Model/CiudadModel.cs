@@ -91,42 +91,18 @@ namespace UCO.PracticaNET.ReglasNegocio.Model
 
             return listadoCiudad;
 
-
-
         }
 
-        public List<CiudadModel> CrearCiudadxSP()
+        public List<CiudadModel> CrearCiudad()
         {
-
-
             //listado ciudad es igual a
             List<CiudadModel> listadoCiudad = new List<CiudadModel>();
 
             //crea el objeto de entidad: instancio el objeto entidadDatos de la clase o entidad UCOPracticasNETEntities
             UCOPracticasNETEntities entidadDatos = new UCOPracticasNETEntities();
+         
+            CiudadModel modelC = new CiudadModel(); 
 
-
-            //configuramos la conexion y sp
-            string sp = "spUCOPractica_ListarCiudades";
-            //conexion viene del App.config
-            string conDB = entidadDatos.Database.Connection.ConnectionString;
-
-            //Ejecutar el sp para retorne de los datos
-            //DataTable dtCiudad = new DataTable();  
-            DataTable dtCiudad = AccesoDirectoSQL.EjecutarSP(sp, conDB);
-
-            //recorremos la tabla o data table 
-            foreach (DataRow fCiudad in dtCiudad.Rows)
-            {
-                CiudadModel listCiudadxSP = new CiudadModel();
-                // nuevaCiudad = listCiudadxSP 
-                //listCiudadxSP.Id = fCiudad["id"].ToString();
-                listCiudadxSP.Id = int.Parse(fCiudad["id"].ToString());
-                listCiudadxSP.Name = fCiudad["nombre"].ToString();
-
-                listadoCiudad.Add(listCiudadxSP);
-
-            }
 
 
             return listadoCiudad;
