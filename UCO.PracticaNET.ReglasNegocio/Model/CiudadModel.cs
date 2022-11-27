@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Entity.Infrastructure;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -69,6 +71,7 @@ namespace UCO.PracticaNET.ReglasNegocio.Model
             //configuramos la conexion y sp
             string sp = "spUCOPractica_ListarCiudades";
             //conexion viene del App.config
+            //string conDB = entidadDatos.Database.Connection.ConnectionString;
             string conDB = entidadDatos.Database.Connection.ConnectionString;
 
             //Ejecutar el sp para retorne de los datos
@@ -81,6 +84,7 @@ namespace UCO.PracticaNET.ReglasNegocio.Model
                 CiudadModel listCiudadxSP = new CiudadModel();
                 // nuevaCiudad = listCiudadxSP 
                 //listCiudadxSP.Id = fCiudad["id"].ToString();
+                //llamamos los campos de la base de datos y los convertimos para mostrarlos en la tabla
                 listCiudadxSP.Id = int.Parse(fCiudad["id"].ToString());
                 listCiudadxSP.Name = fCiudad["nombre"].ToString();
 
@@ -93,22 +97,41 @@ namespace UCO.PracticaNET.ReglasNegocio.Model
 
         }
 
-        public List<CiudadModel> CrearCiudad()
+
+        //List<CiudadModel>
+        public void CrearCiudadLinq()
         {
             //listado ciudad es igual a
-            List<CiudadModel> listadoCiudad = new List<CiudadModel>();
+            CiudadModel ingresarCiudad = new CiudadModel();
 
             //crea el objeto de entidad: instancio el objeto entidadDatos de la clase o entidad UCOPracticasNETEntities
             UCOPracticasNETEntities entidadDatos = new UCOPracticasNETEntities();
-         
-            CiudadModel modelC = new CiudadModel(); 
 
+            //descargo el listado de los datos de ciudad que me devolveria una lista de ciudades
 
+            //ingresarCiudad = entidadDatos.ciudads.Add<ciudad>(ingresarCiudad);
+            
+            entidadDatos.SaveChanges();
 
-            return listadoCiudad;
+            //return ingresarCiudad;
+        }
 
+        public void CrearCiudadxQuery(string querySql)
+        {
+            //string sp = "INSERT INTO ciudad(nombre) VALUES ('nombre nuevo')";
+            UCOPracticasNETEntities entidadDatos = new UCOPracticasNETEntities();
+            string conDB = entidadDatos.Database.Connection.ConnectionString;
 
+            SqlConnection conexionSql = new SqlConnection(conDB);
+            SqlCommand cmd = new SqlCommand(querySql, conexionSql);
 
+            //abrimos la conexion
+            conexionSql.Open();
+
+            cmd.ExecuteNonQuery();
+            //llenar el datatable con la ejecucion del sp
+            //CiudadModel modelC = new CiudadModel();
+            conexionSql.Close();
         }
         #endregion
 

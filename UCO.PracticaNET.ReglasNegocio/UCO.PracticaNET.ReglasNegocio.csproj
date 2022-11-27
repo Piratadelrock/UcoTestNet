@@ -50,7 +50,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AccesoDirectoSQL.cs" />
+    <Compile Include="Sql\AccesoDirectoSQL.cs" />
     <Compile Include="asignatura.cs">
       <DependentUpon>UCOPracticaNETModel.tt</DependentUpon>
     </Compile>
@@ -109,8 +109,6 @@
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Sql\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

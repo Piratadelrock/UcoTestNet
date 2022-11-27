@@ -31,13 +31,13 @@
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.Label nombreLabel;
             this.dataGridCiudad = new System.Windows.Forms.DataGridView();
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ciudadModelBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.nombreTextBox = new System.Windows.Forms.TextBox();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ciudadModelBindingSource = new System.Windows.Forms.BindingSource(this.components);
             nombreLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridCiudad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ciudadModelBindingSource)).BeginInit();
@@ -46,7 +46,7 @@
             // nombreLabel
             // 
             nombreLabel.AutoSize = true;
-            nombreLabel.Location = new System.Drawing.Point(53, 52);
+            nombreLabel.Location = new System.Drawing.Point(28, 15);
             nombreLabel.Name = "nombreLabel";
             nombreLabel.Size = new System.Drawing.Size(56, 16);
             nombreLabel.TabIndex = 4;
@@ -61,25 +61,47 @@
             this.idDataGridViewTextBoxColumn,
             this.nameDataGridViewTextBoxColumn});
             this.dataGridCiudad.DataSource = this.ciudadModelBindingSource;
-            this.dataGridCiudad.Location = new System.Drawing.Point(440, 12);
+            this.dataGridCiudad.Location = new System.Drawing.Point(12, 70);
             this.dataGridCiudad.Name = "dataGridCiudad";
             this.dataGridCiudad.ReadOnly = true;
             this.dataGridCiudad.RowHeadersWidth = 51;
             this.dataGridCiudad.RowTemplate.Height = 24;
-            this.dataGridCiudad.Size = new System.Drawing.Size(446, 472);
+            this.dataGridCiudad.Size = new System.Drawing.Size(443, 166);
             this.dataGridCiudad.TabIndex = 0;
             this.dataGridCiudad.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridCiudad_CellContentClick);
             // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "Codigo de la ciudad";
+            this.idDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // nameDataGridViewTextBoxColumn
+            // 
+            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
+            this.nameDataGridViewTextBoxColumn.HeaderText = "Nombre de la ciudad";
+            this.nameDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            this.nameDataGridViewTextBoxColumn.ReadOnly = true;
+            this.nameDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // ciudadModelBindingSource
+            // 
+            this.ciudadModelBindingSource.DataSource = typeof(UCO.PracticaNET.ReglasNegocio.Model.CiudadModel);
+            // 
             // nombreTextBox
             // 
-            this.nombreTextBox.Location = new System.Drawing.Point(115, 49);
+            this.nombreTextBox.Location = new System.Drawing.Point(90, 15);
             this.nombreTextBox.Name = "nombreTextBox";
             this.nombreTextBox.Size = new System.Drawing.Size(100, 22);
             this.nombreTextBox.TabIndex = 5;
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(56, 96);
+            this.btnSave.Location = new System.Drawing.Point(227, 14);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(75, 23);
             this.btnSave.TabIndex = 9;
@@ -89,7 +111,7 @@
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(221, 96);
+            this.btnCancel.Location = new System.Drawing.Point(308, 15);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(75, 23);
             this.btnCancel.TabIndex = 10;
@@ -99,38 +121,19 @@
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(140, 96);
+            this.btnDelete.Location = new System.Drawing.Point(389, 15);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(75, 23);
             this.btnDelete.TabIndex = 11;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = true;
-            // 
-            // idDataGridViewTextBoxColumn
-            // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "Codigo de la ciudad";
-            this.idDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            this.idDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // nameDataGridViewTextBoxColumn
-            // 
-            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
-            this.nameDataGridViewTextBoxColumn.HeaderText = "Nombre de la ciudad";
-            this.nameDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
-            this.nameDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // ciudadModelBindingSource
-            // 
-            this.ciudadModelBindingSource.DataSource = typeof(UCO.PracticaNET.ReglasNegocio.Model.CiudadModel);
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // ListadoCiudad
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(917, 496);
+            this.ClientSize = new System.Drawing.Size(485, 256);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnSave);

@@ -53,3 +53,22 @@ D:\U\TrainingDev\CAPACITACIONES .NET\codigo\PRACTICA1-act\UCO.PracticaNET\UCO.Pr
 D:\U\TrainingDev\CAPACITACIONES .NET\codigo\PRACTICA1-act\UCO.PracticaNET\UCO.PracticaNET.AppWindows\obj\Debug\UCO.PracticaNET.AppWindows.csproj.CopyComplete
 D:\U\TrainingDev\CAPACITACIONES .NET\codigo\PRACTICA1-act\UCO.PracticaNET\UCO.PracticaNET.AppWindows\obj\Debug\UCO.PracticaNET.AppWindows.exe
 D:\U\TrainingDev\CAPACITACIONES .NET\codigo\PRACTICA1-act\UCO.PracticaNET\UCO.PracticaNET.AppWindows\obj\Debug\UCO.PracticaNET.AppWindows.pdb
+D:\U\Training\CAPACITACIONES .NET 4.6\codigo\PRACTICA1-act\UCO.PracticaNET\UCO.PracticaNET.AppWindows\bin\Debug\UCO.PracticaNET.AppWindows.exe.config
+D:\U\Training\CAPACITACIONES .NET 4.6\codigo\PRACTICA1-act\UCO.PracticaNET\UCO.PracticaNET.AppWindows\bin\Debug\UCO.PracticaNET.AppWindows.exe
+D:\U\Training\CAPACITACIONES .NET 4.6\codigo\PRACTICA1-act\UCO.PracticaNET\UCO.PracticaNET.AppWindows\bin\Debug\UCO.PracticaNET.AppWindows.pdb
+D:\U\Training\CAPACITACIONES .NET 4.6\codigo\PRACTICA1-act\UCO.PracticaNET\UCO.PracticaNET.AppWindows\bin\Debug\EntityFramework.dll
+D:\U\Training\CAPACITACIONES .NET 4.6\codigo\PRACTICA1-act\UCO.PracticaNET\UCO.PracticaNET.AppWindows\bin\Debug\EntityFramework.SqlServer.dll
+D:\U\Training\CAPACITACIONES .NET 4.6\codigo\PRACTICA1-act\UCO.PracticaNET\UCO.PracticaNET.AppWindows\bin\Debug\UCO.PracticaNET.ReglasNegocio.dll
+D:\U\Training\CAPACITACIONES .NET 4.6\codigo\PRACTICA1-act\UCO.PracticaNET\UCO.PracticaNET.AppWindows\bin\Debug\UCO.PracticaNET.ReglasNegocio.pdb
+D:\U\Training\CAPACITACIONES .NET 4.6\codigo\PRACTICA1-act\UCO.PracticaNET\UCO.PracticaNET.AppWindows\bin\Debug\UCO.PracticaNET.ReglasNegocio.dll.config
+D:\U\Training\CAPACITACIONES .NET 4.6\codigo\PRACTICA1-act\UCO.PracticaNET\UCO.PracticaNET.AppWindows\bin\Debug\EntityFramework.xml
+D:\U\Training\CAPACITACIONES .NET 4.6\codigo\PRACTICA1-act\UCO.PracticaNET\UCO.PracticaNET.AppWindows\bin\Debug\EntityFramework.SqlServer.xml
+D:\U\Training\CAPACITACIONES .NET 4.6\codigo\PRACTICA1-act\UCO.PracticaNET\UCO.PracticaNET.AppWindows\obj\Debug\UCO.PracticaNET.AppWindows.csproj.AssemblyReference.cache
+D:\U\Training\CAPACITACIONES .NET 4.6\codigo\PRACTICA1-act\UCO.PracticaNET\UCO.PracticaNET.AppWindows\obj\Debug\UCO.PracticaNET.AppWindows.csproj.SuggestedBindingRedirects.cache
+D:\U\Training\CAPACITACIONES .NET 4.6\codigo\PRACTICA1-act\UCO.PracticaNET\UCO.PracticaNET.AppWindows\obj\Debug\UCO.PracticaNET.AppWindows.ListadoCiudad.resources
+D:\U\Training\CAPACITACIONES .NET 4.6\codigo\PRACTICA1-act\UCO.PracticaNET\UCO.PracticaNET.AppWindows\obj\Debug\UCO.PracticaNET.AppWindows.Properties.Resources.resources
+D:\U\Training\CAPACITACIONES .NET 4.6\codigo\PRACTICA1-act\UCO.PracticaNET\UCO.PracticaNET.AppWindows\obj\Debug\UCO.PracticaNET.AppWindows.csproj.GenerateResource.cache
+D:\U\Training\CAPACITACIONES .NET 4.6\codigo\PRACTICA1-act\UCO.PracticaNET\UCO.PracticaNET.AppWindows\obj\Debug\UCO.PracticaNET.AppWindows.csproj.CoreCompileInputs.cache
+D:\U\Training\CAPACITACIONES .NET 4.6\codigo\PRACTICA1-act\UCO.PracticaNET\UCO.PracticaNET.AppWindows\obj\Debug\UCO.PracticaNET.AppWindows.csproj.CopyComplete
+D:\U\Training\CAPACITACIONES .NET 4.6\codigo\PRACTICA1-act\UCO.PracticaNET\UCO.PracticaNET.AppWindows\obj\Debug\UCO.PracticaNET.AppWindows.exe
+D:\U\Training\CAPACITACIONES .NET 4.6\codigo\PRACTICA1-act\UCO.PracticaNET\UCO.PracticaNET.AppWindows\obj\Debug\UCO.PracticaNET.AppWindows.pdb
