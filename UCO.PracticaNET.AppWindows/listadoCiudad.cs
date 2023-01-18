@@ -29,60 +29,49 @@ namespace UCO.PracticaNET.AppWindows
 
             //necesito llevarselo al grid directamente por lo que debemos usar un bindingsource para aplicarlo
             ciudadModelBindingSource.DataSource = listadoCiudad.ConsultarCiudadxSP();
-            
+
             //consultarLista();
 
-            //TODO: crear crud 
             //ciudadModelBindingSource.DataSource = listadoCiudad.CrearCiudad();
             //se conecta el grid, con el datasource igual al binding de ciudad
             dataGridCiudad.DataSource = ciudadModelBindingSource;
 
         }
 
+
         private void dataGridCiudad_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
-        }
-        void consultarLista()
-        {
-            CiudadModel listadoCiudad = new CiudadModel();
-            ciudadModelBindingSource.DataSource = listadoCiudad.ConsultarCiudadxSP();
-        }
-        void Clear()
-        {
-            nombreTextBox.Text = string.Empty;
-            btnSave.Text = "Save";
-            btnDelete.Enabled = false;
-            //listadoCiudad.Id = 0;
-        }
-
-        private void btnCancel_Click(object sender, EventArgs e)
-        {
-            Clear();
         }
 
         private void btnSave_Click(object sender, EventArgs e)
         {
             //TODO: como grabar sin que cualquier campo este vacio
-            string query = "";
             //en este caso es mi entidad
-            CiudadModel ciudadModel = new CiudadModel();
 
-            if ((nombreTextBox.Text != String.Empty)){
+            if ((nombreTextBox.Text != String.Empty))
+            {
+                CiudadModel ciudadModel = new CiudadModel();
+                //string query = "INSERT INTO ciudad(nombre)
+                //VALUES ('" + nombreTextBox.Text + "')";
 
-                query = "INSERT INTO ciudad(nombre) " +
-                    "VALUES ('" + nombreTextBox.Text + "')";
-                ciudadModel.CrearCiudadxQuery(query);
+                string nombre = nombreTextBox.Text;
+                
+
+                //ciudadModel.CrearCiudadLinq(nombre);
+                ciudadModel.CrearCiudadxQuery(nombre);
+
                 MessageBox.Show("Se a Guardado el nombre de la ciudad : " + nombreTextBox.Text + " Exitosamente");
 
             }
             else
             {
-                MessageBox.Show("No se ha podido guardar la ciudad, ya que esta vacia");
+                MessageBox.Show("No se puede guardar una ciudad sin nombre");
             }
 
             Clear();
             consultarLista();
+            btnDelete.Enabled = false;
 
 
             //ciudadModel.CrearCiudad();
@@ -119,16 +108,62 @@ namespace UCO.PracticaNET.AppWindows
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            CiudadModel ciudadModel = new CiudadModel();
+            deleteLast();
+
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            btnDelete.Enabled = true;
+
+            Clear();
+        }
+
+
+
+        /// <summary>
+        /// Permite actualizar la lista del dataGridView 
+        /// </summary>
+        void consultarLista()
+        {
+            CiudadModel listadoCiudad = new CiudadModel();
+            ciudadModelBindingSource.DataSource = listadoCiudad.ConsultarCiudadxSP();
+        }
+
+        /// <summary>
+        /// permite limpiar los campos 
+        /// </summary>
+        void Clear()
+        {
+            nombreTextBox.Text = string.Empty;
+            btnAñadir.Text = "Save";
+            //listadoCiudad.Id = 0;
+        }
+    
+        private void deleteLast()
+        {
+
             using (UCOPracticasNETEntities context = new UCOPracticasNETEntities())
             {
-                var std = context.ciudads.Last<ciudad>();
-                context.ciudads.Remove(std);
+                CiudadModel ciudadModel = new CiudadModel();
+
+
+                //var std = context.ciudads.First<ciudad>;
+                
+                //context.ciudads.Remove(std);
+                
                 context.SaveChanges();
             }
             consultarLista();
+        }
+
+        private void deleteByName(){
+            CiudadModel ciudad = new CiudadModel();
+
 
         }
+
+  
     }
 
 }

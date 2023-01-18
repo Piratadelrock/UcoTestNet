@@ -98,8 +98,14 @@ namespace UCO.PracticaNET.ReglasNegocio.Model
         }
 
 
+        #region Zona Crud
+
+        //crear
+
+
+
         //List<CiudadModel>
-        public void CrearCiudadLinq()
+        public void CrearCiudadLinq(string nombre)
         {
             //listado ciudad es igual a
             CiudadModel ingresarCiudad = new CiudadModel();
@@ -110,15 +116,18 @@ namespace UCO.PracticaNET.ReglasNegocio.Model
             //descargo el listado de los datos de ciudad que me devolveria una lista de ciudades
 
             //ingresarCiudad = entidadDatos.ciudads.Add<ciudad>(ingresarCiudad);
-            
+
             entidadDatos.SaveChanges();
 
             //return ingresarCiudad;
         }
 
-        public void CrearCiudadxQuery(string querySql)
+        public void CrearCiudadxQuery(string nombreTxt)
         {
             //string sp = "INSERT INTO ciudad(nombre) VALUES ('nombre nuevo')";
+
+            string querySql = "INSERT INTO ciudad(nombre) VALUES ('" + nombreTxt + "')";
+
             UCOPracticasNETEntities entidadDatos = new UCOPracticasNETEntities();
             string conDB = entidadDatos.Database.Connection.ConnectionString;
 
@@ -134,10 +143,6 @@ namespace UCO.PracticaNET.ReglasNegocio.Model
             conexionSql.Close();
         }
         #endregion
-
-        #region Zona Crud
-
-        //crear
         //actualizar
         //eliminar
 
